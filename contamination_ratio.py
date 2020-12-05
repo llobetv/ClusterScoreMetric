@@ -44,6 +44,6 @@ def contamination_ratio(spike_train, sampling_rate, total_duration,
 
     freq = N / (total_duration/sampling_rate) # freq of the unit
     
-    ratio_contamination = 1 - (1 - N_conta / (Tf*N*freq))**0.5 # factor 2 is missing because we use np.diff where only refractory period AFTER each spike is check
+    ratio_contamination = 1 - (1 - N_conta / (Tf*N*freq))**0.5 
     
     return ratio_contamination
